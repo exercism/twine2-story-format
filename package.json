@@ -1,8 +1,8 @@
 {
-  "name": "Snowman",
-  "version": "2.0.0",
-  "description": "A minimal story format for authors experienced with HTML, CSS, and JavaScript.",
-  "author": "Chris Klimas <chris@twinery.org>",
+  "name": "Exercism",
+  "version": "1.0.0",
+  "description": "Story format to build exercism walkthroughs",
+  "author": "Karlo Soriano <karlo@thalamus.ai>",
   "license": "MIT",
   "repository": "https://bitbucket.org/klembot/snowman-2",
   "scripts": {
@@ -15,7 +15,8 @@
   "dependencies": {
     "jquery": "^3.2.1",
     "lz-string": "^1.4.4",
-    "marked": "^0.3.5",
+    "marked": "^0.4",
+    "npm": "^6.3.0",
     "underscore": "^1.8.3"
   },
   "devDependencies": {

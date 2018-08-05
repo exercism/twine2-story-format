@@ -39,9 +39,8 @@ function render(source) {
 	/* [[links]] */
 
 	result = result.replace(/\[\[(.*?)\]\]/g, function(match, target) {
-		var display = target;
-
 		/* display|target format */
+    var display;
 
 		var barIndex = target.indexOf('|');
 
@@ -70,18 +69,15 @@ function render(source) {
 			}
 		}
 
-		/* Does this look like an external link? */
-
-		if (/^\w+:\/\/\/?\w/i.test(target)) {
-			return '<a href="' + target + '">' + display + '</a>';
-		}
-		else {
+		if (display) {
 			return '<a href="javascript:void(0)" data-passage="' +
 				_.escape(target) + '">' + display + '</a>';
-		}
+		} else {
+      return '[[' + target + ']]';
+    }
 	});
 
-	marked.setOptions({ smartypants: true });
+	marked.setOptions({ smartypants: true, gfm: false });
 	return marked(result);
 };
 
