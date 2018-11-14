@@ -1,10 +1,10 @@
 {
-  "name": "Exercism_Prod",
+  "name": "Exercism",
   "version": "1.0.0",
   "description": "Story format to build exercism walkthroughs",
   "author": "Karlo Soriano <karlo@thalamus.ai>",
   "license": "MIT",
-  "repository": "https://bitbucket.org/klembot/snowman-2",
+  "repository": "",
   "scripts": {
     "clean": "rimraf build/ dist/",
     "build": "node scripts/build-format.js && node scripts/build-guide.js",
