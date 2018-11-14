@@ -38,7 +38,7 @@ function render(source) {
 
 	/* [[links]] */
 
-	result = result.replace(/\[\[(.*?)\]\]/g, function(match, target) {
+	result = result.replace(/(?:(?<!```\n.*))(?:(?!.*\n```))\[\[(.*?)\]\]/g, function(match, target) {
 		/* display|target format */
     var display;
 
