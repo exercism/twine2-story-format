@@ -186,7 +186,7 @@ _.extend(Story.prototype, {
 		$(window).on('popstate', function(event) {
 			var state = event.originalEvent.state;
 
-			if (state) {
+			if (state && Array.isArray(state.history)) {
 				this.state = state.state;
 				this.history = state.history;
 				this.checkpointName = state.checkpointName;
